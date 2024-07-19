@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.function.Function;
 
 public class OneArgHandler implements CommandHandler {
-    private static Map<String, Function<String, Command>> NAME_TO_GENERATOR = ImmutableMap.of(
+    private static final Map<String, Function<String, Command>> NAME_TO_GENERATOR = ImmutableMap.of(
             "label", Label::generate,
             "goto", Goto::generate,
             "if-goto", IfGoto::generate

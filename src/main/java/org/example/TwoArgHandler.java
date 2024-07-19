@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.function.BiFunction;
 
 public class TwoArgHandler implements CommandHandler {
-    private static Map<String, BiFunction<String, String, Command>> NAME_TO_GENERATOR = ImmutableMap.of(
+    private static final Map<String, BiFunction<String, String, Command>> NAME_TO_GENERATOR = ImmutableMap.of(
             "push", Push::generate,
             "pop", Pop::generate,
             "function", Function::generate,
